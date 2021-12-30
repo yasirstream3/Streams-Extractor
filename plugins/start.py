@@ -19,12 +19,12 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("HELP", callback_data="help_data"),
-                    InlineKeyboardButton("ABOUT", callback_data="about_data"),
+                    InlineKeyboardButton("Help", callback_data="help_data"),
+                    InlineKeyboardButton("About", callback_data="about_data"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")
+                        "⭕️ YMovieZNew Channel ⭕️", url="https://t.me/YMovieZNew")
                 ]
             ]
         ),
@@ -40,12 +40,12 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("BACK", callback_data="start_data"),
-                    InlineKeyboardButton("ABOUT", callback_data="about_data"),
+                    InlineKeyboardButton("Back", callback_data="start_data"),
+                    InlineKeyboardButton("About", callback_data="about_data"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")
+                        "⭕️ Owner ⭕️", url="https://t.me/YasirArisM")
                 ]
             ]
         ),
@@ -61,12 +61,8 @@ async def about(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("BACK", callback_data="help_data"),
-                    InlineKeyboardButton("START", callback_data="start_data"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Streams-Extractor")
+                    InlineKeyboardButton("Back", callback_data="help_data"),
+                    InlineKeyboardButton("Start", callback_data="start_data"),
                 ]
             ]
         ),
