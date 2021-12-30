@@ -22,9 +22,9 @@ async def cb_handler(client, query):
     if query.data == "start_data":
         await query.answer()
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("HELP", callback_data="help_data"),
-                InlineKeyboardButton("ABOUT", callback_data="about_data")],
-            [InlineKeyboardButton("⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")]
+            [InlineKeyboardButton("Help", callback_data="help_data"),
+                InlineKeyboardButton("About", callback_data="about_data")],
+            [InlineKeyboardButton("⭕️ YMovieZNew Channel ⭕️", url="https://t.me/YMovieZNew")]
         ])
 
         await query.message.edit_text(
@@ -38,9 +38,9 @@ async def cb_handler(client, query):
     elif query.data == "help_data":
         await query.answer()
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("BACK", callback_data="start_data"),
-                InlineKeyboardButton("ABOUT", callback_data="about_data")],
-            [InlineKeyboardButton("⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")]
+            [InlineKeyboardButton("Back", callback_data="start_data"),
+                InlineKeyboardButton("About", callback_data="about_data")],
+            [InlineKeyboardButton("⭕️ Owner ⭕️", url="https://t.me/YasirArisM")]
         ])
 
         await query.message.edit_text(
@@ -54,9 +54,8 @@ async def cb_handler(client, query):
     elif query.data == "about_data":
         await query.answer()
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("BACK", callback_data="help_data"),
-                InlineKeyboardButton("START", callback_data="start_data")],
-            [InlineKeyboardButton("SOURCE CODE", url="https://github.com/TroJanzHEX/Streams-Extractor")]
+            [InlineKeyboardButton("Back", callback_data="help_data"),
+                InlineKeyboardButton("Start", callback_data="start_data")]
         ])
 
         await query.message.edit_text(
@@ -84,7 +83,7 @@ async def cb_handler(client, query):
             )
         except:
             await query.answer(
-                "Processing your file...",
+                "Processing your file, yang sabar yakk...",
                 show_alert=True
             )
 
@@ -92,7 +91,7 @@ async def cb_handler(client, query):
     elif query.data == "close": 
         await query.message.delete()  
         await query.answer(
-                "Cancelled...",
+                "Cancelled (dibatalkan)...",
                 show_alert=True
             ) 
 
