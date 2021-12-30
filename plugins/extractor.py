@@ -13,20 +13,16 @@ from script import Script
 
 @trojanz.on_message(filters.private & (filters.document | filters.video))
 async def confirm_dwnld(client, message):
-
-    if message.from_user.id not in Config.AUTH_USERS:
-        return
-
     media = message
     filetype = media.document or media.video
 
     if filetype.mime_type.startswith("video/"):
         await message.reply_text(
-            "**What you want me to do??**",
+            "**What you want me to do??\n\nApa yang ingin kamu lakukan?**",
             quote=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="DOWNLOAD and PROCESS", callback_data="download_file")],
-                [InlineKeyboardButton(text="CANCEL", callback_data="close")]
+                [InlineKeyboardButton(text="Download and Process", callback_data="download_file")],
+                [InlineKeyboardButton(text="Cancel", callback_data="close")]
             ])
         )
     else:
