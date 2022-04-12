@@ -24,7 +24,7 @@ async def start(client, message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "⭕️ YMovieZNew Channel ⭕️", url="https://t.me/YMovieZNew")
+                        "⭕️ YMovieZNew Channel ⭕️", url="https://t.me/YMovieZ_New")
                 ]
             ]
         ),
