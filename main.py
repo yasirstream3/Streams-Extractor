@@ -13,12 +13,12 @@ if __name__ == "__main__":
         root="plugins"
     )
     app = Client(
-        "TroJanz",
+        "YasirBot Subs",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins,
         workers=300
     )
-    Config.AUTH_USERS.add(680815375)
+    Config.AUTH_USERS.add(617426792)
     app.run()
