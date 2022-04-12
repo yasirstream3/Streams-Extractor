@@ -13,6 +13,9 @@ from script import Script
 
 @trojanz.on_message(filters.private & (filters.document | filters.video))
 async def confirm_dwnld(client, message):
+    if message.from_user.id not in Config.AUTH_USERS:
+        return await message.reply("🚫 Mohon maaf, bot ini hanya bisa digunakan oleh orang tertentu saja.\n\n<i>Sorry, this bot only can used by authorized user.</i>\n\n<b>Owner</b>: @YasirArisM")
+
     media = message
     filetype = media.document or media.video
 
